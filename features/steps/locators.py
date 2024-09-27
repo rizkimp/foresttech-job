@@ -6,6 +6,7 @@ class locator(object):
     form_apply = "//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/form[1]"
     input_name = "//input[@id='name']"
     input_email = "//input[@id='email']"
+    notif_invalid_email = "//span[contains(text(),'Please input the correct email format.')]"
     input_code = "//input[@id='code']"
     info_code = "//span[@id='country']"
     input_phone = "//input[@id='phone']"
