@@ -8,6 +8,7 @@ from playwright.sync_api import sync_playwright
 @given(u'visit forest technology career page')
 def step_impl(context):
     context.page.goto('https://theforest.ai/careers')
+    time.sleep(10)
 
 @then(u'scroll to available vacancies')
 def step_impl(context):
