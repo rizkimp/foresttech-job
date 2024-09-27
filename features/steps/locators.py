@@ -10,6 +10,7 @@ class locator(object):
     input_code = "//input[@id='code']"
     info_code = "//span[@id='country']"
     input_phone = "//input[@id='phone']"
+    notif_invalid_phone = "//span[contains(text(),'Please check your phone number')]"
     button_next = "//div[contains(text(),'Next')]"
     input_cv = "//input[@id='fileInput']"
     cv_uploaded = "//span[contains(text(),'Complete')]"
