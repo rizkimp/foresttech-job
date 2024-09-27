@@ -2,7 +2,7 @@ name: Python Package
 
 on:
   push:
-    branches: [ main ]  # Ganti dengan nama cabang yang sesuai
+    branches: [ main ]
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.12.6'  # Ganti dengan versi Python yang sesuai
+        python-version: '3.12.6'
 
     - name: Install dependencies
       run: |
@@ -24,11 +24,10 @@ jobs:
 
     - name: Run Behave tests
       run: |
-        behave features/ --no-capture --format=json --outfile=results.json
-        allure generate results.json -o allure_report --clean
+        behave 
 
     - name: Upload Allure Report
-      uses: actions/upload-artifact@v3  # Versi terbaru
+      uses: actions/upload-artifact@v3
       with:
         name: allure-report
         path: allure-result
